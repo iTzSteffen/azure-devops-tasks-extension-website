@@ -1,60 +1,102 @@
-# Azure DevOps Tasks Chrome Extension Website
+# Azure DevOps Tasks Chrome Extension
 
-This repository contains the marketing website for the Azure DevOps Tasks Chrome Extension. The website showcases the extension's features and provides setup instructions for users.
+A Chrome extension that brings your Azure DevOps tasks directly into your browser. View and manage your tasks without switching contexts, right in your browser's new tab or with a simple click.
 
-## Overview
+![Extension Light Mode](images/ext_light.png) ![Extension Dark Mode](images/ext_dark.png)
 
-The Azure DevOps Tasks Chrome Extension integrates with Azure DevOps to display your tasks directly in Chrome, either in a new tab or as a popup. This website explains how to use the extension and its key features.
+## Features
 
-## Website Structure
+- **Kanban Board View**: View your tasks in an intuitive kanban board layout
+- **Real-time Updates**: Automatic sync with Azure DevOps
+- **New Tab Integration**: Access tasks every time you open a new tab
+- **Multiple Connections**: Connect to multiple Azure DevOps organizations and projects
+- **Dark Mode Support**: Switch between light and dark themes
+- **Customizable Display**: Choose between new tab, popup, or both
 
-The website includes the following sections:
+## Installation
 
-- **Hero Section**: Overview of the extension's main purpose
-- **Features**: Highlights of key functionality
-- **Setup Instructions**: Step-by-step guide to installing and configuring
-- **Usage Guide**: How to use the extension effectively
-- **FAQ**: Answers to common questions
+1. Visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/your-extension-id) to install the extension
+2. Click "Add to Chrome" to install
 
-## Development
+## Setup
 
-The website is built with vanilla HTML, CSS, and JavaScript with no external dependencies, making it easy to maintain and deploy.
+1. **Create a Personal Access Token (PAT)**:
 
-### File Structure
+   - Go to your Azure DevOps organization settings
+   - Create a PAT with these scopes:
+     - Work Items (Read)
+     - Boards (Read)
+     - Code (Read)
 
-- `index.html` - Main HTML file
-- `styles.css` - All styling
-- `scripts.js` - JavaScript for interactive elements
-- `/images` - Contains all screenshot and icon assets
+   ![Creating PAT](images/access_token.png)
 
-## Running Locally
+2. **Configure the Extension**:
 
-To run the website locally:
+   - Click the extension icon in Chrome
+   - Click the gear icon to open settings
+   - Add your connection details:
+     - Organization Name
+     - Project Name
+     - Personal Access Token
 
-1. Clone this repository
-2. Open `index.html` in your browser
+   ![Connection Settings](images/azure_connection.png)
 
-No build process or server setup is required.
+3. **Choose Display Preferences**:
 
-## Deployment
+   - New Tab only
+   - Popup only
+   - Both New Tab and Popup
 
-The website can be deployed to any static hosting service like GitHub Pages, Netlify, or Vercel.
+   ![Display Preferences](images/display_preferences.png)
 
-## Adding Screenshots
+## Usage
 
-You'll need to add actual screenshots of the extension to the following files in the `/images` directory:
+### Viewing Tasks
 
-- `icon128.png` - Extension icon (128x128px)
-- `icon48.png` - Extension icon (48x48px)
-- `screenshot-main.png` - Main screenshot for the hero section
-- `install-extension.png` - Screenshot showing installation process
-- `create-pat.png` - Screenshot showing PAT creation in Azure DevOps
-- `connect-settings.png` - Screenshot of connection settings
-- `display-settings.png` - Screenshot of display preferences
-- `viewing-tasks.png` - Screenshot of the task board view
-- `task-details.png` - Screenshot of expanded task details
-- `open-in-azure.png` - Screenshot highlighting the Azure DevOps link
-- `multiple-connections.png` - Screenshot showing multiple connections
+- Open a new tab or click the extension icon to see your tasks
+- Tasks are displayed in a kanban board with columns for different states
+- Click any task to view its full details
+
+![Viewing Tasks](images/viewing_tasks.png)
+
+### Task Details
+
+- View task description
+- See acceptance criteria
+- Check metadata
+- Open in Azure DevOps with one click
+
+![Task Details](images/task_details.png)
+
+### Multiple Organizations
+
+- Add multiple Azure DevOps connections
+- View tasks from all organizations in one board
+- Switch between organizations easily
+
+![Multiple Connections](images/multiple_connections.png)
+
+## Support
+
+If you need help or have questions:
+
+- Email: steffen.hofbauer@googlemail.com
+- GitHub: [Report Issues](https://github.com/iTzSteffen/azure-devops-tasks-extension-website)
+- Check the [FAQ section](index.html#faq) for common questions
+
+## Privacy & Security
+
+- Your PAT is stored securely in Chrome's storage
+- All communication with Azure DevOps is over HTTPS
+- No data is stored on external servers
+- You can revoke access at any time
+
+## Related Links
+
+- [Chrome Web Store Listing](https://chrome.google.com/webstore/detail/your-extension-id)
+- [GitHub Repository](https://github.com/iTzSteffen/azure-devops-tasks-extension)
+- [Privacy Policy](privacy.html)
+- [Terms of Service](terms.html)
 
 ## License
 
