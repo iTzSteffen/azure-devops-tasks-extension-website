@@ -82,27 +82,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Before and After Image Slider functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   initBeforeAfterSlider();
 });
 
 function initBeforeAfterSlider() {
-  const container = document.querySelector('.before-and-after-container');
+  const container = document.querySelector(".before-and-after-container");
   if (!container) return; // Exit if container doesn't exist
-  
-  const beforeImage = container.querySelector('.before-image');
-  const handle = container.querySelector('.handle');
+
+  const beforeImage = container.querySelector(".before-image");
+  const handle = container.querySelector(".handle");
   let isResizing = false;
 
   // Initialize mouse and touch event listeners
-  container.addEventListener('mousedown', startSliding);
-  container.addEventListener('touchstart', startSliding, { passive: false });
-  
-  window.addEventListener('mousemove', slide);
-  window.addEventListener('touchmove', slide, { passive: false });
-  
-  window.addEventListener('mouseup', stopSliding);
-  window.addEventListener('touchend', stopSliding);
+  container.addEventListener("mousedown", startSliding);
+  container.addEventListener("touchstart", startSliding, { passive: false });
+
+  window.addEventListener("mousemove", slide);
+  window.addEventListener("touchmove", slide, { passive: false });
+
+  window.addEventListener("mouseup", stopSliding);
+  window.addEventListener("touchend", stopSliding);
 
   // Set initial position
   updateSliderPosition(50); // Start at 50%
@@ -110,44 +110,44 @@ function initBeforeAfterSlider() {
   function startSliding(e) {
     e.preventDefault();
     isResizing = true;
-    
+
     // Add active class for styling purposes if desired
-    container.classList.add('active');
+    container.classList.add("active");
   }
-  
+
   function stopSliding() {
     isResizing = false;
-    
+
     // Remove active class
-    container.classList.remove('active');
+    container.classList.remove("active");
   }
-  
+
   function slide(e) {
     if (!isResizing) return;
-    
+
     // Prevent default behavior for touch events
-    if (e.type === 'touchmove') {
+    if (e.type === "touchmove") {
       e.preventDefault();
     }
-    
+
     // Get coordinates
     const containerRect = container.getBoundingClientRect();
-    const x = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
-    
+    const x = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+
     // Calculate position as percentage
     let position = ((x - containerRect.left) / containerRect.width) * 100;
-    
+
     // Limit position between 0 and 100
     position = Math.max(0, Math.min(position, 100));
-    
+
     // Update slider position
     updateSliderPosition(position);
   }
-  
+
   function updateSliderPosition(position) {
     // Set width of before image
     beforeImage.style.width = `${position}%`;
-    
+
     // Set position of slider handle
     handle.style.left = `${position}%`;
   }
