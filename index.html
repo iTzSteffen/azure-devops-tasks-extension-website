@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azure DevOps Tasks Chrome Extension</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/icon128.png" alt="Extension Logo" />
+              <h1>Azure DevOps Tasks</h1>
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Stay on top of your Azure DevOps tasks, directly in Chrome</h1>
+          <p>
+            Access and manage your Azure DevOps tasks without switching
+            contexts, right in your browser's new tab or with a simple click.
+          </p>
+          <div class="cta-buttons">
+            <a href="#" class="btn primary">Download Extension</a>
+            <a href="#setup" class="btn secondary">Setup Guide</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="before-and-after-container">
+            <div class="before-image">
+              <img src="images/ext_light.png" alt="Extension Light Mode" />
+            </div>
+            <div class="after-image">
+              <img src="images/ext_dark.png" alt="Extension Dark Mode" />
+            </div>
+            <div class="handle">
+              <div class="handle-circle">
+                <div class="handle-arrows">
+                  <div class="arrow left-arrow"></div>
+                  <div class="arrow right-arrow"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-columns"></i>
+            </div>
+            <h3>Kanban Board View</h3>
+            <p>
+              View your tasks in an intuitive kanban board layout that makes
+              tracking progress easy.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-sync"></i>
+            </div>
+            <h3>Real-time Updates</h3>
+            <p>
+              Get up-to-date information on your tasks with automatic sync from
+              Azure DevOps.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-tablet-alt"></i>
+            </div>
+            <h3>New Tab Integration</h3>
+            <p>
+              Access your tasks every time you open a new tab, making task
+              management seamless.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Multiple Connections</h3>
+            <p>
+              Connect to multiple Azure DevOps organizations and projects
+              simultaneously.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-moon"></i>
+            </div>
+            <h3>Dark Mode Support</h3>
+            <p>
+              Switch between light and dark themes based on your preference.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-cog"></i>
+            </div>
+            <h3>Customizable Display</h3>
+            <p>
+              Choose to display tasks in new tab, popup, or both according to
+              your workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="setup">
+      <div class="container">
+        <h2>Setting Up the Extension</h2>
+        <div class="setup-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Install the Extension</h3>
+              <p>
+                Download and install the extension from the Chrome Web Store.
+              </p>
+              <img
+                src="images/install-extension.png"
+                alt="Installation Screenshot"
+              />
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Create an Azure DevOps Personal Access Token (PAT)</h3>
+              <p>
+                Navigate to your Azure DevOps organization settings and create a
+                PAT with the following scopes:
+              </p>
+              <ul>
+                <li>Work Items (Read)</li>
+                <li>Boards (Read)</li>
+                <li>Code (Read)</li>
+              </ul>
+              <img
+                src="images/access_token.png"
+                alt="Creating PAT Screenshot"
+              />
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Connect to Azure DevOps</h3>
+              <p>
+                Open the extension settings by clicking the gear icon and add
+                your connection details:
+              </p>
+              <ul>
+                <li>Organization Name (e.g., contoso)</li>
+                <li>Project Name (e.g., MyProject)</li>
+                <li>Personal Access Token</li>
+              </ul>
+              <img
+                src="images/azure_connection.png"
+                alt="Connection Settings Screenshot"
+              />
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Choose Display Preferences</h3>
+              <p>Select how you want the extension to appear:</p>
+              <ul>
+                <li>New Tab only</li>
+                <li>Popup only</li>
+                <li>Both New Tab and Popup</li>
+              </ul>
+              <img
+                src="images/display-settings.png"
+                alt="Display Settings Screenshot"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="usage" class="usage">
+      <div class="container">
+        <h2>Using the Extension</h2>
+        <div class="usage-grid">
+          <div class="usage-item">
+            <h3>Viewing Tasks</h3>
+            <p>
+              Your Azure DevOps tasks are displayed in a kanban board with
+              columns representing different states (To Do, In Progress, Done).
+            </p>
+            <img
+              src="images/viewing_tasks.png"
+              alt="Viewing Tasks Screenshot"
+            />
+          </div>
+          <div class="usage-item">
+            <h3>Opening in Azure DevOps</h3>
+            <p>
+              Each task includes a direct link to open it in Azure DevOps for
+              additional actions like state changes or comments.
+            </p>
+            <img
+              src="images/open_azure.png"
+              alt="Opening in Azure DevOps Screenshot"
+            />
+          </div>
+          <div class="usage-item">
+            <h3>Task Details</h3>
+            <p>
+              Click on any task card to view its full details, including
+              description, acceptance criteria, and metadata.
+            </p>
+            <img src="images/task_details.png" alt="Task Details Screenshot" />
+          </div>
+          <div class="usage-item">
+            <h3>Multiple Connections</h3>
+            <p>
+              Tasks from all your connected Azure DevOps organizations and
+              projects will appear in the same board.
+            </p>
+            <img
+              src="images/multiple_connections.png"
+              alt="Multiple Connections Screenshot"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Is my Azure DevOps data secure?</h3>
+              <span class="accordion-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Yes, your data is secure. The extension only stores your PAT
+                locally in your browser's secure storage and communicates
+                directly with Azure DevOps API. No data is transmitted to
+                third-party servers.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>
+                Can I use the extension with on-premise Azure DevOps Server?
+              </h3>
+              <span class="accordion-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Currently, the extension supports cloud-based Azure DevOps only.
+                Support for on-premise installations may be added in future
+                updates.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>How often does the extension refresh task data?</h3>
+              <span class="accordion-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                The extension automatically refreshes data when you open a new
+                tab or the popup.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Can I update task status directly from the extension?</h3>
+              <span class="accordion-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                Currently, the extension provides a read-only view of your
+                tasks. To update task status, use the "Open in Azure DevOps"
+                link to access the full Azure DevOps interface.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>Is this extension available for other browsers?</h3>
+              <span class="accordion-icon"
+                ><i class="fas fa-chevron-down"></i
+              ></span>
+            </div>
+            <div class="accordion-content">
+              <p>
+                At this time, the extension is only available for Google Chrome.
+                Support for other browsers like Firefox or Edge may be
+                considered in future releases.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="images/icon128.png" alt="Extension Logo" />
+            <h2>Azure DevOps Tasks Extension</h2>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#setup">Setup</a></li>
+              <li><a href="#usage">Usage</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Chrome Web Store</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Azure DevOps Tasks Extension. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
